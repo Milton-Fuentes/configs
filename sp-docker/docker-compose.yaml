@@ -1,0 +1,66 @@
+  keycloak:
+#    image: quay.io/keycloak/keycloak:17.0.0 error 
+    image: quay.io/keycloak/keycloak:16.1.0 
+    container_name: keycloak-service   
+    mem_limit: 350m
+    ports:
+      - "8100:8080"
+    networks:
+      - ms-network   
+    environment: 
+      DB_VENDOR: POSTGRES
+      DB_ADDR: postgres
+      DB_DATABASE: keycloak
+      DB_USER: keycloak
+      DB_SCHEMA: public
+      DB_PASSWORD: password
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: Pa55w0rd        
+               
+  zipkin-service:
+    image: openzipkin/zipkin:2.23 
+    container_name: zipkin-service   
+    mem_limit: 300m
+    ports:
+      - "9411:9411"
+    networks:
+      - ms-network     
+  postgres:
+    image: postgres:14.2
+    container_name: postgres-service   
+    mem_limit: 350m
+    ports:
+      - "5432:5432"
+    networks:
+      - ms-network   
+    environment: 
+      - POSTGRES_USERNAME=postgres   
+      - POSTGRES_PASSWORD=admin 
+    volumes:
+      - postgresql-volume:/var/lib/postgresql/data
+  mongo:
+    image: mongo:5.0.8
+    container_name: mongodb-service   
+    mem_limit: 350m
+    ports:
+      - "27018:27017"
+    networks:
+      - ms-network   
+    environment: 
+      - MONGO_INITDB_DATABASE=property
+    #  - MONGO_INITDB_ROOT_USERNAME=admin
+    #  - MONGO_INITDB_ROOT_PASSWORD=admin
+    volumes:
+      - mogo-data:/data/db 
+      - mongo-config:/data/configdb
+volumes: 
+  postgresql-volume:
+    external: true      
+  mogodata:
+    external: true  
+  mongo-config:
+networks:
+  ms-network:     
+  
+#spring-boot:build-image -DskipTests
+    
