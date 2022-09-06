@@ -1,30 +1,30 @@
 version: '3.7'
 
 services: 
-  naming-service:
-    image: registry.atser.com/msv1/naming-service:1.0.0
-    container_name: naming-server     
-    mem_limit: 700m
-    ports:
-      - "8761:8761"
-    networks:
-      - ms-network   
-  config-service:
-    image: registry.atser.com/msv1/config-service:1.0.0
-    container_name: config-server     
-    mem_limit: 700m
-    ports:
-      - "8888:8888"
-    networks:
-      - ms-network
-  limit-service:
-    image: registry.atser.com/msv1/limit-service:1.0.0
-    container_name: limit-server    
-    mem_limit: 700m
-    ports:
-      - "8081:8081"
-    networks:
-      - ms-network  
+ # naming-service:
+ #   image: registry.atser.com/msv1/naming-service:1.0.0
+ #   container_name: naming-server     
+ #   mem_limit: 700m
+ #   ports:
+ #     - "8761:8761"
+ #   networks:
+ #     - ms-network   
+ # config-service:
+ #   image: registry.atser.com/msv1/config-service:1.0.0
+ #   container_name: config-server     
+ #   mem_limit: 700m
+ #   ports:
+ #     - "8888:8888"
+ #   networks:
+ #     - ms-network
+ # limit-service:
+ #   image: registry.atser.com/msv1/limit-service:1.0.0
+ #   container_name: limit-server    
+ #   mem_limit: 700m
+ #   ports:
+ #     - "8081:8081"
+ #   networks:
+ #     - ms-network  
   keycloak-service:
     #image: quay.io/keycloak/keycloak:17.0.0 error
     #actual version
@@ -37,10 +37,7 @@ services:
       - "9990:9990"
     networks:
       - ms-network
-    command: 
-      - "-b 0.0.0.0 -Dkeycloak.import=/opt/jboss/keycloak/imports/realm-export.json"  
     environment:
-      KEYCLOAK_IMPORT: /opt/jboss/keycloak/imports/realm-export.json -Dkeycloak.profile.feature.upload_scripts=enabled 
       DB_VENDOR: POSTGRES
       DB_ADDR: postgres
       DB_DATABASE: keycloak
@@ -73,7 +70,7 @@ services:
 volumes:
   postgresql-volume:
     external: true
-  mongo-data:
+  mogo-data:
     external: true
   mongo-config:
 networks:
