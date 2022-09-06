@@ -15,8 +15,7 @@
       DB_SCHEMA: public
       DB_PASSWORD: password
       KEYCLOAK_USER: admin
-      KEYCLOAK_PASSWORD: Pa55w0rd
-        
+      KEYCLOAK_PASSWORD: Pa55w0rd        
                
   zipkin-service:
     image: openzipkin/zipkin:2.23 
