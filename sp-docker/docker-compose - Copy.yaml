@@ -1,0 +1,197 @@
+version: '3.7'
+
+services:  
+  glob-service:
+    image: registry.atser.com/msv1/glob-service:1.0.0
+    container_name: glob-server     
+    mem_limit: 700m
+    ports:
+      - "8101:8101"
+    networks:
+      - ms-network 
+    environment:   
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-service:8761/eureka
+      SPRING.ZIPKIN.BASEURL: http://zipkin-service:9411/     
+#      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+#      SPRING_RABBITMQ_HOST: rabbitmq
+#      SPRING_ZIPKIN_SENDER_TYPE: rabbit  
+#    depends_on:
+#      - rabbitmq  
+  adm-service:
+    image: registry.atser.com/msv1/adm-service:1.0.0
+    container_name: adm-server     
+    mem_limit: 700m
+    ports:
+      - "8102:8102"
+    networks:
+      - ms-network
+    environment:   
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-service:8761/eureka   
+      SPRING.ZIPKIN.BASEURL: http://zipkin-service:9411/ 
+#      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+#      SPRING_RABBITMQ_HOST: rabbitmq
+#      SPRING_ZIPKIN_SENDER_TYPE: rabbit  
+#    depends_on:
+#      - rabbitmq 
+  qa-service:
+    image: registry.atser.com/msv1/qa-service:1.0.0
+    container_name: qa-server     
+    mem_limit: 700m
+    ports:
+      - "8103:8103"
+    networks:
+      - ms-network
+    environment:   
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-service:8761/eureka   
+      SPRING.ZIPKIN.BASEURL: http://zipkin-service:9411/ 
+#      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+#      SPRING_RABBITMQ_HOST: rabbitmq
+#      SPRING_ZIPKIN_SENDER_TYPE: rabbit  
+#    depends_on:
+#      - rabbitmq  
+#  tk-service:
+#    image: atser/msv1:tk-service
+#    container_name: tk-server     
+#    mem_limit: 700m
+#    ports:
+#      - "8104:8104"
+#    networks:
+#      - ms-network
+#    environment:   
+#      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-service:8761/eureka   
+#      SPRING.ZIPKIN.BASEURL: http://zipkin-service:9411/ 
+#      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+#      SPRING_RABBITMQ_HOST: rabbitmq
+#      SPRING_ZIPKIN_SENDER_TYPE: rabbit  
+#    depends_on:
+#      - rabbitmq 
+  rp-service:
+    image: registry.atser.com/msv1/rp-service:1.0.0
+    container_name: rp-server     
+    mem_limit: 1024m
+    ports:
+      - "8000:8000"
+    networks:
+      - ms-network
+    environment:   
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-service:8761/eureka 
+      SPRING.ZIPKIN.BASEURL: http://zipkin-service:9411/ 
+#      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+#      SPRING_RABBITMQ_HOST: rabbitmq
+#      SPRING_ZIPKIN_SENDER_TYPE: rabbit  
+#    depends_on:
+#      - rabbitmq 
+  properties-service:
+    image: registry.atser.com/msv1/properties-service:1.0.0
+    container_name: pr-server     
+    mem_limit: 700m
+    ports:
+      - "8001:8001"
+    networks:
+      - ms-network 
+    environment:   
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-service:8761/eureka   
+      SPRING.ZIPKIN.BASEURL: http://zipkin-service:9411/ 
+#      RABBIT_URI: amqp://guest:guest@rabbitmq:5672
+#      SPRING_RABBITMQ_HOST: rabbitmq
+#      SPRING_ZIPKIN_SENDER_TYPE: rabbit  
+#    depends_on:
+#      - rabbitmq 
+  gateway:
+    image: registry.atser.com/msv1/gateway:1.0.0
+    container_name: gateway-server     
+    mem_limit: 700m
+    ports:
+      - "8765:8765"
+    networks:
+      - ms-network  
+    environment:   
+      EUREKA.CLIENT.SERVICEURL.DEFAULTZONE: http://naming-service:8761/eureka      
+      SPRING.ZIPKIN.BASEURL: http://zipkin-service:9411/
+      #KEYCLOAK.GATEWAY.SECRET: GE0HPiWesUvgWS1Wkoa5lGzTH9hbGuTl
+      #KEYCLOAK.GATEWAY.ISSUER: https://localhost:8443/auth/realms/manageit
+      #SPRING.SECURITY.OAUTH2.RESOURCESERVER.JWT.ISSUERURI: https://keycloak-service:8443/auth/realms/manageit
+      #SPRING.SECURITY.OAUTH2.CLIENT.PROVIDER.KEYCLOAKPROVIDER.ISSUERURI: http://localhost:8080/auth/realms/manageit
+      #SPRING.SECURITY.OAUTH2.CLIENT.REGISTRATION.GATEWAY.CLIENTID: gateway-api
+      #SPRING.SECURITY.OAUTH2.CLIENT.REGISTRATION.GATEWAY.CLIENTSECRET: GE0HPiWesUvgWS1Wkoa5lGzTH9hbGuTl
+    depends_on:
+#      - rabbitmq     
+      - naming-service
+      - keycloak-service   
+  naming-service:
+    image: registry.atser.com/msv1/naming-service:1.0.0
+    container_name: naming-server     
+    mem_limit: 700m
+    ports:
+      - "8761:8761"
+    networks:
+      - ms-network   
+  config-service:
+    image: registry.atser.com/msv1/config-service:1.0.0
+    container_name: config-server     
+    mem_limit: 700m
+    ports:
+      - "8888:8888"
+    networks:
+      - ms-network
+  limit-service:
+    image: registry.atser.com/msv1/limit-service:1.0.0
+    container_name: limit-server    
+    mem_limit: 700m
+    ports:
+      - "8081:8081"
+    networks:
+      - ms-network  
+  keycloak-service:
+    #image: quay.io/keycloak/keycloak:17.0.0 error
+    #actual version
+    image: quay.io/keycloak/keycloak:16.1.0
+    container_name: keycloak-server
+    mem_limit: 700m
+    ports:
+      - "8443:8443"
+      - "8080:8080"
+      - "9990:9990"
+    networks:
+      - ms-network
+    environment:
+      DB_VENDOR: POSTGRES
+      DB_ADDR: postgres
+      DB_DATABASE: keycloak
+      DB_USER: keycloak
+      DB_SCHEMA: public
+      DB_PASSWORD: password
+      KEYCLOAK_USER: admin
+      KEYCLOAK_PASSWORD: Pa55w0rd 
+  zipkin-service:
+    image: openzipkin/zipkin:2.23 
+    container_name: zipkin-server
+    mem_limit: 350m
+    ports:
+      - "9411:9411"
+    networks:
+      - ms-network
+  postgres:
+    image: postgres:14.2
+    container_name: postgres-server
+    mem_limit: 350m
+    ports:
+      - "5433:5432"
+    networks:
+      - ms-network
+    environment:
+      - POSTGRES_USERNAME=postgres
+      - POSTGRES_PASSWORD=admin
+    volumes:
+      - postgresql-volume:/var/lib/postgresql/data
+volumes:
+  postgresql-volume:
+    external: true
+  mogo-data:
+    external: true
+  mongo-config:
+networks:
+  ms-network:
+  
+#spring-boot:build-image -DskipTests
+    
