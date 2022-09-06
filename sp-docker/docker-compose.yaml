@@ -70,7 +70,7 @@ services:
 volumes:
   postgresql-volume:
     external: true
-  mogo-data:
+  mongo-data:
     external: true
   mongo-config:
 networks:
