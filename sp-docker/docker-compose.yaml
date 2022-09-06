@@ -1,44 +1,13 @@
-version: '3.7'
-
-services: 
- # naming-service:
- #   image: registry.atser.com/msv1/naming-service:1.0.0
- #   container_name: naming-server     
- #   mem_limit: 700m
- #   ports:
- #     - "8761:8761"
- #   networks:
- #     - ms-network   
- # config-service:
- #   image: registry.atser.com/msv1/config-service:1.0.0
- #   container_name: config-server     
- #   mem_limit: 700m
- #   ports:
- #     - "8888:8888"
- #   networks:
- #     - ms-network
- # limit-service:
- #   image: registry.atser.com/msv1/limit-service:1.0.0
- #   container_name: limit-server    
- #   mem_limit: 700m
- #   ports:
- #     - "8081:8081"
- #   networks:
- #     - ms-network  
-  keycloak-service:
-    #image: quay.io/keycloak/keycloak:17.0.0 error
-    #actual version
-    image: quay.io/keycloak/keycloak:16.1.0
-    container_name: keycloak-server
-    mem_limit: 700m
+  keycloak:
+#    image: quay.io/keycloak/keycloak:17.0.0 error 
+    image: quay.io/keycloak/keycloak:16.1.0 
+    container_name: keycloak-service   
+    mem_limit: 350m
     ports:
-      - "8443:8443"
-      - "8080:8080"
-      - "9990:9990"
+      - "8100:8080"
     networks:
-      - ms-network      
-    environment:
-      KEYCLOAK_IMPORT: /opt/jboss/keycloak/imports/realm-export.json -Dkeycloak.profile.feature.upload_scripts=enabled 
+      - ms-network   
+    environment: 
       DB_VENDOR: POSTGRES
       DB_ADDR: postgres
       DB_DATABASE: keycloak
@@ -46,36 +15,53 @@ services:
       DB_SCHEMA: public
       DB_PASSWORD: password
       KEYCLOAK_USER: admin
-      KEYCLOAK_PASSWORD: Pa55w0rd 
+      KEYCLOAK_PASSWORD: Pa55w0rd
+        
+               
   zipkin-service:
     image: openzipkin/zipkin:2.23 
-    container_name: zipkin-server
-    mem_limit: 350m
+    container_name: zipkin-service   
+    mem_limit: 300m
     ports:
       - "9411:9411"
     networks:
-      - ms-network
+      - ms-network     
   postgres:
     image: postgres:14.2
-    container_name: postgres-server
+    container_name: postgres-service   
     mem_limit: 350m
     ports:
-      - "5433:5432"
+      - "5432:5432"
     networks:
-      - ms-network
-    environment:
-      - POSTGRES_USERNAME=postgres
-      - POSTGRES_PASSWORD=admin
+      - ms-network   
+    environment: 
+      - POSTGRES_USERNAME=postgres   
+      - POSTGRES_PASSWORD=admin 
     volumes:
       - postgresql-volume:/var/lib/postgresql/data
-volumes:
+  mongo:
+    image: mongo:5.0.8
+    container_name: mongodb-service   
+    mem_limit: 350m
+    ports:
+      - "27018:27017"
+    networks:
+      - ms-network   
+    environment: 
+      - MONGO_INITDB_DATABASE=property
+    #  - MONGO_INITDB_ROOT_USERNAME=admin
+    #  - MONGO_INITDB_ROOT_PASSWORD=admin
+    volumes:
+      - mogo-data:/data/db 
+      - mongo-config:/data/configdb
+volumes: 
   postgresql-volume:
-    external: true
-  mongo-data:
-    external: true
+    external: true      
+  mogodata:
+    external: true  
   mongo-config:
 networks:
-  ms-network:
+  ms-network:     
   
 #spring-boot:build-image -DskipTests
     
