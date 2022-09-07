@@ -3,6 +3,15 @@ version: '3.7'
 
 
 services:
+  filestack/node:
+    image: filestack/node:latest 
+    container_name: filestack-service   
+    mem_limit: 300m
+    ports:
+      - "8110:8110"
+    networks:
+      - sp-network   
+  
   zipkin-service:
     image: openzipkin/zipkin:2.23 
     container_name: zipkin-service   
