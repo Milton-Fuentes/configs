@@ -3,7 +3,7 @@ version: '3.7'
 
 
 services:
-  filestack/node:
+  filestack-service:
     image: filestack/node:latest 
     container_name: filestack-service   
     mem_limit: 300m
