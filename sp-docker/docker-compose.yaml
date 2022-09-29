@@ -2,7 +2,7 @@ version: '3.7'
 
 
 
-services:
+services:  
   filestack-service:
     image: filestack/node:latest 
     container_name: filestack-service   
@@ -20,8 +20,9 @@ services:
       - "9411:9411"
     networks:
       - sp-network 
-  keycloak:
+  keycloak-service:
     image: jboss/keycloak:latest
+    container_name: keycloak-server 
     environment:
       DB_VENDOR: POSTGRES
       DB_ADDR: postgres # <<< This is the address, change it to your external db ip/domain
@@ -40,6 +41,7 @@ services:
       - postgres
   postgres: # Service name 
     image: postgres:14.2
+    container_name: postgres-service 
     volumes:
       - postgresql-volume:/var/lib/postgresql/data
     environment:
