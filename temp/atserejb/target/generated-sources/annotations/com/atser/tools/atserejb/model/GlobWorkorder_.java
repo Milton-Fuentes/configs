@@ -1,0 +1,117 @@
+package com.atser.tools.atserejb.model;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.Date;
+import javax.annotation.Generated;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+
+@Generated(value = "org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
+@StaticMetamodel(GlobWorkorder.class)
+public abstract class GlobWorkorder_ {
+
+	public static volatile SingularAttribute<GlobWorkorder, String> createDateTmp;
+	public static volatile SingularAttribute<GlobWorkorder, String> lastModBy;
+	public static volatile SingularAttribute<GlobWorkorder, Date> serviceDate;
+	public static volatile SingularAttribute<GlobWorkorder, String> engNotes;
+	public static volatile SingularAttribute<GlobWorkorder, Date> dueDate;
+	public static volatile SingularAttribute<GlobWorkorder, String> fdInstruction;
+	public static volatile SingularAttribute<GlobWorkorder, String> woNo;
+	public static volatile SingularAttribute<GlobWorkorder, BigInteger> activityId;
+	public static volatile SingularAttribute<GlobWorkorder, String> serviceDateTmp;
+	public static volatile SingularAttribute<GlobWorkorder, String> techNotes;
+	public static volatile SingularAttribute<GlobWorkorder, String> arriveSiteTime;
+	public static volatile SingularAttribute<GlobWorkorder, String> contact;
+	public static volatile SingularAttribute<GlobWorkorder, BigDecimal> id;
+	public static volatile SingularAttribute<GlobWorkorder, String> fdService;
+	public static volatile SingularAttribute<GlobWorkorder, String> travelTime;
+	public static volatile SingularAttribute<GlobWorkorder, BigInteger> contactRefId;
+	public static volatile SingularAttribute<GlobWorkorder, String> contactTelephone;
+	public static volatile SingularAttribute<GlobWorkorder, String> arriveLabTime;
+	public static volatile SingularAttribute<GlobWorkorder, String> woLong;
+	public static volatile SingularAttribute<GlobWorkorder, String> testCategory;
+	public static volatile SingularAttribute<GlobWorkorder, Character> active;
+	public static volatile SingularAttribute<GlobWorkorder, Character> woCompleted;
+	public static volatile SingularAttribute<GlobWorkorder, String> version;
+	public static volatile SingularAttribute<GlobWorkorder, String> certification;
+	public static volatile SingularAttribute<GlobWorkorder, BigInteger> woShort;
+	public static volatile SingularAttribute<GlobWorkorder, String> cancelled;
+	public static volatile SingularAttribute<GlobWorkorder, String> lastMod;
+	public static volatile SingularAttribute<GlobWorkorder, BigInteger> projectId;
+	public static volatile SingularAttribute<GlobWorkorder, String> labNotes;
+	public static volatile SingularAttribute<GlobWorkorder, String> woToken;
+	public static volatile SingularAttribute<GlobWorkorder, String> testType;
+	public static volatile SingularAttribute<GlobWorkorder, String> departSiteTime;
+	public static volatile SingularAttribute<GlobWorkorder, String> lastModIp;
+	public static volatile SingularAttribute<GlobWorkorder, String> segmentId;
+	public static volatile SingularAttribute<GlobWorkorder, String> labInstruction;
+	public static volatile SingularAttribute<GlobWorkorder, String> department;
+	public static volatile SingularAttribute<GlobWorkorder, Date> createDate;
+	public static volatile SingularAttribute<GlobWorkorder, String> manager;
+	public static volatile SingularAttribute<GlobWorkorder, String> fdDescription;
+	public static volatile SingularAttribute<GlobWorkorder, String> techName;
+	public static volatile SingularAttribute<GlobWorkorder, String> engServiceType;
+	public static volatile SingularAttribute<GlobWorkorder, String> createByIp;
+	public static volatile SingularAttribute<GlobWorkorder, BigInteger> materialUseId;
+	public static volatile SingularAttribute<GlobWorkorder, String> createBy;
+	public static volatile SingularAttribute<GlobWorkorder, String> departLabTime;
+	public static volatile SingularAttribute<GlobWorkorder, String> techDirections;
+	public static volatile SingularAttribute<GlobWorkorder, String> lastModTmp;
+	public static volatile SingularAttribute<GlobWorkorder, String> dueDateTmp;
+	public static volatile SingularAttribute<GlobWorkorder, String> engInstruction;
+	public static volatile SingularAttribute<GlobWorkorder, String> fdNotes;
+
+	public static final String CREATE_DATE_TMP = "createDateTmp";
+	public static final String LAST_MOD_BY = "lastModBy";
+	public static final String SERVICE_DATE = "serviceDate";
+	public static final String ENG_NOTES = "engNotes";
+	public static final String DUE_DATE = "dueDate";
+	public static final String FD_INSTRUCTION = "fdInstruction";
+	public static final String WO_NO = "woNo";
+	public static final String ACTIVITY_ID = "activityId";
+	public static final String SERVICE_DATE_TMP = "serviceDateTmp";
+	public static final String TECH_NOTES = "techNotes";
+	public static final String ARRIVE_SITE_TIME = "arriveSiteTime";
+	public static final String CONTACT = "contact";
+	public static final String ID = "id";
+	public static final String FD_SERVICE = "fdService";
+	public static final String TRAVEL_TIME = "travelTime";
+	public static final String CONTACT_REF_ID = "contactRefId";
+	public static final String CONTACT_TELEPHONE = "contactTelephone";
+	public static final String ARRIVE_LAB_TIME = "arriveLabTime";
+	public static final String WO_LONG = "woLong";
+	public static final String TEST_CATEGORY = "testCategory";
+	public static final String ACTIVE = "active";
+	public static final String WO_COMPLETED = "woCompleted";
+	public static final String VERSION = "version";
+	public static final String CERTIFICATION = "certification";
+	public static final String WO_SHORT = "woShort";
+	public static final String CANCELLED = "cancelled";
+	public static final String LAST_MOD = "lastMod";
+	public static final String PROJECT_ID = "projectId";
+	public static final String LAB_NOTES = "labNotes";
+	public static final String WO_TOKEN = "woToken";
+	public static final String TEST_TYPE = "testType";
+	public static final String DEPART_SITE_TIME = "departSiteTime";
+	public static final String LAST_MOD_IP = "lastModIp";
+	public static final String SEGMENT_ID = "segmentId";
+	public static final String LAB_INSTRUCTION = "labInstruction";
+	public static final String DEPARTMENT = "department";
+	public static final String CREATE_DATE = "createDate";
+	public static final String MANAGER = "manager";
+	public static final String FD_DESCRIPTION = "fdDescription";
+	public static final String TECH_NAME = "techName";
+	public static final String ENG_SERVICE_TYPE = "engServiceType";
+	public static final String CREATE_BY_IP = "createByIp";
+	public static final String MATERIAL_USE_ID = "materialUseId";
+	public static final String CREATE_BY = "createBy";
+	public static final String DEPART_LAB_TIME = "departLabTime";
+	public static final String TECH_DIRECTIONS = "techDirections";
+	public static final String LAST_MOD_TMP = "lastModTmp";
+	public static final String DUE_DATE_TMP = "dueDateTmp";
+	public static final String ENG_INSTRUCTION = "engInstruction";
+	public static final String FD_NOTES = "fdNotes";
+
+}
+

@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <display-name>Atser WS</display-name>
+    <welcome-file-list>
+        <welcome-file>faces/index.html</welcome-file>
+    </welcome-file-list>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+    <context-param>
+        <param-name>javax.faces.PROJECT_STAGE</param-name>
+        <param-value>Production</param-value>
+    </context-param>
+    <filter>
+        <filter-name>cors</filter-name>
+        <filter-class>com.atser.tools.atserws.filters.CORSFilter</filter-class>
+        <!--<init-param>
+            <param-name>cors.allowOrigin</param-name>
+            <param-value>https://massdot.atser.com</param-value>
+        </init-param>-->
+    </filter>
+    <filter-mapping>
+        <filter-name>cors</filter-name>
+        <url-pattern>/rs/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>Faces Servlet</servlet-name>
+        <servlet-class>javax.faces.webapp.FacesServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Faces Servlet</servlet-name>
+        <url-pattern>/faces/*</url-pattern>
+    </servlet-mapping>
+    <context-param>
+        <param-name>javax.faces.CONFIG_FILES</param-name>
+        <param-value>/WEB-INF/faces-config.xml</param-value>
+    </context-param>
+    <!-- Swagger Configuration -->
+    <!--<servlet>
+        <servlet-name>OpenApi</servlet-name>
+        <servlet-class>io.swagger.v3.jaxrs2.integration.OpenApiServlet</servlet-class>
+
+        <init-param>
+            <param-name>openApi.configuration.resourcePackages</param-name>
+            <param-value>io.swagger.sample.resource</param-value>
+        </init-param>
+        -->
+        <!-- alternatively include a file openapi.json or openapi.yaml / openapi-configuration.json or openapi-configuration.yaml in classpath -->
+
+        <!-- alternatively include a configuration file in the location specified below -->
+        <!--
+          <init-param>
+            <param-name>openApi.configuration.location</param-name>
+            <param-value>/openapi-configuration.json</param-value>
+          </init-param>
+        -->
+    <!--</servlet>-->
+
+    <!--<servlet-mapping>
+        <servlet-name>OpenApi</servlet-name>
+        <url-pattern>/openapi/*</url-pattern>
+    </servlet-mapping>-->
+    
+    <!--<servlet-mapping>
+        <servlet-name>javax.ws.rs.core.Application</servlet-name>
+        <url-pattern>/infinispan/*</url-pattern>
+    </servlet-mapping>-->
+    
+    <!--Swagger-->
+    <!--<servlet>
+        <servlet-name>Jersey2Config</servlet-name>
+        <servlet-class>io.swagger.jaxrs.config.DefaultJaxrsConfig</servlet-class>
+        <init-param>
+            <param-name>api.version</param-name>
+            <param-value>1.0.3</param-value>
+        </init-param>
+        <init-param>
+            <param-name>swagger.api.basepath</param-name>
+            <param-value>http://localhost:5908/ws/rs</param-value>
+        </init-param>
+        <load-on-startup>2</load-on-startup>
+    </servlet>-->
+    
+    <!--<context-param>
+        <param-name>resteasy.providers</param-name>
+        <param-value>
+            io.swagger.jaxrs.listing.ApiListingResource,
+            io.swagger.jaxrs.listing.SwaggerSerializers,
+        </param-value>
+    </context-param>-->
+    
+    <error-page>
+        <!-- Forbidden directory listing -->
+        <error-code>403</error-code>
+        <location>/error/403.html</location>
+    </error-page>
+    <error-page>
+        <error-code>400</error-code>
+        <location>/error/403.html</location>
+    </error-page>
+    <error-page>
+        <error-code>403</error-code>
+        <location>/error/403.html</location>
+    </error-page>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error/403.html</location>
+    </error-page>
+    <error-page>
+        <error-code>408</error-code>
+        <location>/error/403.html</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error/403.html</location>
+    </error-page>
+    <!-- web fonts -->
+    <mime-mapping>
+        <extension>eot</extension>
+        <mime-type>application/vnd.ms-fontobject</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>otf</extension>
+        <mime-type>font/opentype</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>ttf</extension>
+        <mime-type>application/x-font-ttf</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>woff</extension>
+        <!--<mime-type>application/x-font-woff</mime-type>-->
+        <mime-type>application/font-woff</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>woff2</extension>
+        <mime-type>application/font-woff2</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>svg</extension>
+        <mime-type>image/svg+xml</mime-type>
+    </mime-mapping>
+    <mime-mapping>
+        <extension>ico</extension>
+        <mime-type>image/x-icon</mime-type>
+    </mime-mapping>
+</web-app>

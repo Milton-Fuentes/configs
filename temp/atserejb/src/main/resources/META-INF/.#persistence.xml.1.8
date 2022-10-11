@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="com.atser.tools_atseree-ejb_ejb_0.1.0PU" transaction-type="JTA">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <jta-data-source>java:/AtserDS</jta-data-source>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <!--  Enable selective 2nd level cache -->
+    <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
+    <properties>
+      <property name="hibernate.show_sql" value="false"/>
+      <property name="hibernate.format_sql" value="false"/>
+      <property name="hibernate.generate_statistics" value="false"/>
+      <!--<property name="hibernate.hbm2ddl.auto" value="update"/>-->
+      <!--<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>-->
+      <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle12cDialect"/>
+      <property name="hibernate.jdbc.batch_size" value="100"/>
+      <property name="hibernate.order_inserts" value="true"/>
+      <property name="hibernate.order_updates" value="true"/>
+      <!--*********** Second Level Cache **************-->
+      <!-- Enables second level cache -->
+      <property name="hibernate.cache.use_second_level_cache" value="true"/>
+      <!-- Enable query cache -->
+      <property name="hibernate.cache.use_query_cache" value="true"/>
+      <!-- Generate statistics to see effects of second level cache -->
+      <property name="hibernate.cache.use_structured_entries" value="true"/>
+      <property name="hibernate.javax.cache.missing_cache_strategy" value="create"/>
+      <!-- ************** Use Infinispan ******************* -->
+      <!-- Use Infinispan second level cache provider -->
+      <!--<property name="hibernate.cache.region.factory_class" value="infinispan"/>-->
+      <!-- Force using local configuration when only using a single node.
+            Otherwise a clustered configuration is loaded. -->
+      <!--<property name="hibernate.cache.infinispan.cfg" value="org/infinispan/hibernate/cache/commons/builder/infinispan-configs-local.xml"/>-->
+      <!-- Entity specific configuration, e.g. via property: hibernate.cache.infinispan.<Entity FQN>.expiration.max_idle -->
+      <!--<property name="hibernate.cache.infinispan.org.infinispan.com.atser.tools.atserejb.model.GlobSystemProperties.expiration.max_idle" value= "1000"/>-->
+      <!-- ************** Use JCache ******************* -->
+      <!--Use JCacheRegionFactory second level cache provider-->
+      <property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.jcache.JCacheRegionFactory"/>
+      <property name="hibernate.javax.cache.provider" value="org.ehcache.jsr107.EhcacheCachingProvider"/>
+      <property name="hibernate.javax.cache.uri" value="file:/META-INF/ehcache.xml"/>
+    </properties>
+  </persistence-unit>
+  <!--QMS Versioning-->
+  <persistence-unit name="com.atser.tools_atseree-ejb_ejb_0.2.0PU" transaction-type="JTA">
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+    <jta-data-source>java:/AtserQmsVDS</jta-data-source>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
+    <properties>
+      <property name="hibernate.show_sql" value="false"/>
+      <property name="hibernate.format_sql" value="false"/>
+      <!--<property name="hibernate.dialect" value="org.hibernate.dialect.Oracle10gDialect"/>-->
+      <property name="hibernate.dialect" value="org.hibernate.dialect.Oracle12cDialect"/>
+      <property name="hibernate.jdbc.batch_size" value="100"/>
+      <property name="hibernate.order_inserts" value="true"/>
+      <property name="hibernate.order_updates" value="true"/>
+    </properties>
+  </persistence-unit>
+</persistence>

@@ -1,0 +1,28 @@
+<jboss-deployment-structure>
+	
+    <ear-subdeployments-isolated>true</ear-subdeployments-isolated>
+	
+    <deployment>
+        <exclude-subsystems>
+            <!--<subsystem name="logging"/>-->
+        </exclude-subsystems>      			
+        <dependencies>
+            <module name="com.fasterxml.jackson.jaxrs.jackson-jaxrs-json-provider" export="true" />
+            <module name="org.apache.commons.lang" export="true" />			
+            <module name="org.apache.commons.beanutils" export="true" />
+            <module name="org.slf4j" export="true"/>	
+            <module name="org.dom4j" export="true"/>
+            <!--<module name="org.infinispan" export="true"/>-->
+            <!--<module name="org.infinispan.commons" export="true" />-->
+            <!--<module name="org.infinispan.protostream" export="true" />-->
+        </dependencies>
+        <exclusions>
+            <module name="org.apache.log4j" />
+            <!--<module name="org.slf4j" />
+            <module name='org.slf4j.impl' />-->
+            <module name="org.apache.commons.logging" />
+            <module name="org.log4j" />
+            <!--<module name="org.jboss.logging" />-->
+        </exclusions>
+    </deployment>
+</jboss-deployment-structure>	

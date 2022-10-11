@@ -1,0 +1,118 @@
+package com.atser.tools.atserejb.model;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import java.util.Date;
+import javax.annotation.Generated;
+import javax.persistence.metamodel.ListAttribute;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+
+@Generated(value = "org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
+@StaticMetamodel(QaaspmMixdesignsJmf.class)
+public abstract class QaaspmMixdesignsJmf_ {
+
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> minvma;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> lastModBy;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> desac;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> maxvtm;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> main;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> jmfAc;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> maxengvfa;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> maxdpbr;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> id;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, QaaspmMixdesigns> mixDesignId;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> desdpbr;
+	public static volatile ListAttribute<QaaspmMixdesignsJmf, QaaspmMixdesignsJmfSieves> qaaspmMixdesignsJmfSievesList;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> minvtm;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> minengvtm;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> minengac;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> maxvma;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> maxengvma;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> maxac;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigInteger> jmfNo;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> version;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, Date> approvedDate;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> field10;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> desvfa;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> maxengac;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> minengvma;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> lastMod;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> maxvfa;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> minac;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> maxengvtm;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> desvma;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> lastModIp;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> minengdpbr;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> mindpbr;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> createDate;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> minengvfa;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> minvfa;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> createByIp;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> pctAbsorption;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> field1;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> createBy;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> maxengdpbr;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigDecimal> desvtm;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigInteger> field7;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> field6;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> field9;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, BigInteger> field8;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> field3;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> field2;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> field5;
+	public static volatile SingularAttribute<QaaspmMixdesignsJmf, String> field4;
+
+	public static final String MINVMA = "minvma";
+	public static final String LAST_MOD_BY = "lastModBy";
+	public static final String DESAC = "desac";
+	public static final String MAXVTM = "maxvtm";
+	public static final String MAIN = "main";
+	public static final String JMF_AC = "jmfAc";
+	public static final String MAXENGVFA = "maxengvfa";
+	public static final String MAXDPBR = "maxdpbr";
+	public static final String ID = "id";
+	public static final String MIX_DESIGN_ID = "mixDesignId";
+	public static final String DESDPBR = "desdpbr";
+	public static final String QAASPM_MIXDESIGNS_JMF_SIEVES_LIST = "qaaspmMixdesignsJmfSievesList";
+	public static final String MINVTM = "minvtm";
+	public static final String MINENGVTM = "minengvtm";
+	public static final String MINENGAC = "minengac";
+	public static final String MAXVMA = "maxvma";
+	public static final String MAXENGVMA = "maxengvma";
+	public static final String MAXAC = "maxac";
+	public static final String JMF_NO = "jmfNo";
+	public static final String VERSION = "version";
+	public static final String APPROVED_DATE = "approvedDate";
+	public static final String FIELD10 = "field10";
+	public static final String DESVFA = "desvfa";
+	public static final String MAXENGAC = "maxengac";
+	public static final String MINENGVMA = "minengvma";
+	public static final String LAST_MOD = "lastMod";
+	public static final String MAXVFA = "maxvfa";
+	public static final String MINAC = "minac";
+	public static final String MAXENGVTM = "maxengvtm";
+	public static final String DESVMA = "desvma";
+	public static final String LAST_MOD_IP = "lastModIp";
+	public static final String MINENGDPBR = "minengdpbr";
+	public static final String MINDPBR = "mindpbr";
+	public static final String CREATE_DATE = "createDate";
+	public static final String MINENGVFA = "minengvfa";
+	public static final String MINVFA = "minvfa";
+	public static final String CREATE_BY_IP = "createByIp";
+	public static final String PCT_ABSORPTION = "pctAbsorption";
+	public static final String FIELD1 = "field1";
+	public static final String CREATE_BY = "createBy";
+	public static final String MAXENGDPBR = "maxengdpbr";
+	public static final String DESVTM = "desvtm";
+	public static final String FIELD7 = "field7";
+	public static final String FIELD6 = "field6";
+	public static final String FIELD9 = "field9";
+	public static final String FIELD8 = "field8";
+	public static final String FIELD3 = "field3";
+	public static final String FIELD2 = "field2";
+	public static final String FIELD5 = "field5";
+	public static final String FIELD4 = "field4";
+
+}
+

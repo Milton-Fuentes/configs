@@ -1,0 +1,110 @@
+package com.atser.tools.atserejb.model;
+
+import java.math.BigInteger;
+import java.util.Date;
+import javax.annotation.Generated;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+
+@Generated(value = "org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
+@StaticMetamodel(DotCondensitylwC567.class)
+public abstract class DotCondensitylwC567_ {
+
+	public static volatile SingularAttribute<DotCondensitylwC567, String> testResults;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> odMassSatSurfDryCylinder;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> specimenNo;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> sampleTcn;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> testNo;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> traceNo;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> mixdesignno;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> odCalcEquilibriumDensity;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> odMassOvenDriedCylinder;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> cmLocation;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> sampleNo;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> biditemNo;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> eqMassDriedCylinder;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> testingTech;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> pName;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> eqMassSuspImmersedCylinder;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> testNoLink;
+	public static volatile SingularAttribute<DotCondensitylwC567, BigInteger> labId;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> function;
+	public static volatile SingularAttribute<DotCondensitylwC567, BigInteger> id;
+	public static volatile SingularAttribute<DotCondensitylwC567, BigInteger> mixDesignId;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> odCalcOvenDryDensity;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> specMin;
+	public static volatile SingularAttribute<DotCondensitylwC567, Character> peReview;
+	public static volatile SingularAttribute<DotCondensitylwC567, BigInteger> qaSampleId;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> eqMassSatSurfDryCylinder;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> specMax;
+	public static volatile SingularAttribute<DotCondensitylwC567, BigInteger> clientId;
+	public static volatile SingularAttribute<DotCondensitylwC567, Character> testClosed;
+	public static volatile SingularAttribute<DotCondensitylwC567, BigInteger> subbiditemId;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> labname;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> labPrep;
+	public static volatile SingularAttribute<DotCondensitylwC567, Character> active;
+	public static volatile SingularAttribute<DotCondensitylwC567, Date> dateoftest;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> pNumber;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> passfail;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> subbiditemDescript;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> odMassSuspImmersedCylinder;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> equipList;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> biditemDescript;
+	public static volatile SingularAttribute<DotCondensitylwC567, BigInteger> biditemId;
+	public static volatile SingularAttribute<DotCondensitylwC567, BigInteger> testId;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> eqMeasuredOvenDryDensity;
+	public static volatile SingularAttribute<DotCondensitylwC567, BigInteger> projectId;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> techId;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> remarks;
+	public static volatile SingularAttribute<DotCondensitylwC567, String> status;
+
+	public static final String TEST_RESULTS = "testResults";
+	public static final String OD_MASS_SAT_SURF_DRY_CYLINDER = "odMassSatSurfDryCylinder";
+	public static final String SPECIMEN_NO = "specimenNo";
+	public static final String SAMPLE_TCN = "sampleTcn";
+	public static final String TEST_NO = "testNo";
+	public static final String TRACE_NO = "traceNo";
+	public static final String MIXDESIGNNO = "mixdesignno";
+	public static final String OD_CALC_EQUILIBRIUM_DENSITY = "odCalcEquilibriumDensity";
+	public static final String OD_MASS_OVEN_DRIED_CYLINDER = "odMassOvenDriedCylinder";
+	public static final String CM_LOCATION = "cmLocation";
+	public static final String SAMPLE_NO = "sampleNo";
+	public static final String BIDITEM_NO = "biditemNo";
+	public static final String EQ_MASS_DRIED_CYLINDER = "eqMassDriedCylinder";
+	public static final String TESTING_TECH = "testingTech";
+	public static final String P_NAME = "pName";
+	public static final String EQ_MASS_SUSP_IMMERSED_CYLINDER = "eqMassSuspImmersedCylinder";
+	public static final String TEST_NO_LINK = "testNoLink";
+	public static final String LAB_ID = "labId";
+	public static final String FUNCTION = "function";
+	public static final String ID = "id";
+	public static final String MIX_DESIGN_ID = "mixDesignId";
+	public static final String OD_CALC_OVEN_DRY_DENSITY = "odCalcOvenDryDensity";
+	public static final String SPEC_MIN = "specMin";
+	public static final String PE_REVIEW = "peReview";
+	public static final String QA_SAMPLE_ID = "qaSampleId";
+	public static final String EQ_MASS_SAT_SURF_DRY_CYLINDER = "eqMassSatSurfDryCylinder";
+	public static final String SPEC_MAX = "specMax";
+	public static final String CLIENT_ID = "clientId";
+	public static final String TEST_CLOSED = "testClosed";
+	public static final String SUBBIDITEM_ID = "subbiditemId";
+	public static final String LABNAME = "labname";
+	public static final String LAB_PREP = "labPrep";
+	public static final String ACTIVE = "active";
+	public static final String DATEOFTEST = "dateoftest";
+	public static final String P_NUMBER = "pNumber";
+	public static final String PASSFAIL = "passfail";
+	public static final String SUBBIDITEM_DESCRIPT = "subbiditemDescript";
+	public static final String OD_MASS_SUSP_IMMERSED_CYLINDER = "odMassSuspImmersedCylinder";
+	public static final String EQUIP_LIST = "equipList";
+	public static final String BIDITEM_DESCRIPT = "biditemDescript";
+	public static final String BIDITEM_ID = "biditemId";
+	public static final String TEST_ID = "testId";
+	public static final String EQ_MEASURED_OVEN_DRY_DENSITY = "eqMeasuredOvenDryDensity";
+	public static final String PROJECT_ID = "projectId";
+	public static final String TECH_ID = "techId";
+	public static final String REMARKS = "remarks";
+	public static final String STATUS = "status";
+
+}
+

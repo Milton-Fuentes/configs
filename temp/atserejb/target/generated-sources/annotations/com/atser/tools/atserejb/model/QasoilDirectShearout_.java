@@ -1,0 +1,110 @@
+package com.atser.tools.atserejb.model;
+
+import java.math.BigDecimal;
+import java.math.BigInteger;
+import javax.annotation.Generated;
+import javax.persistence.metamodel.SingularAttribute;
+import javax.persistence.metamodel.StaticMetamodel;
+
+@Generated(value = "org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
+@StaticMetamodel(QasoilDirectShearout.class)
+public abstract class QasoilDirectShearout_ {
+
+	public static volatile SingularAttribute<QasoilDirectShearout, String> beforeTestDryDensity;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> beforeTestVoidRatio;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> afterTestWetDensity;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> specimenNo;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> lastModBy;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> description;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> shearMaxShearStress;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> shearAvgNormalStress;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> beforeTestWetDensity;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> beforeTestDiameter;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> lastModIp;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> boringNo;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> consolidationNoStages;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> afterTestDryDensity;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> beforeTestSaturation;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> shearFinalHeight;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> specificGravity;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> prep;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> afterTestWaterContent;
+	public static volatile SingularAttribute<QasoilDirectShearout, BigDecimal> id;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> specimenType;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> uscsClass;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> shearMaxShearForce;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> shearHeightChange;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> createDate;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> beforeTestWaterContent;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> beforeTestHeight;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> afterTestSaturation;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> beforeTestVolume;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> shearNoStages;
+	public static volatile SingularAttribute<QasoilDirectShearout, Character> active;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> beforeTestArea;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> shearMaxDisplacement;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> version;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> shearTravel;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> createByIp;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> shearFinalVolume;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> createBy;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> depth;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> shearAvgRate;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> afterTestVoidRatio;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> consolidationSettlement;
+	public static volatile SingularAttribute<QasoilDirectShearout, BigInteger> testId;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> dateTest;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> aashtoClass;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> beforeTestVolumeSolids;
+	public static volatile SingularAttribute<QasoilDirectShearout, String> lastMod;
+
+	public static final String BEFORE_TEST_DRY_DENSITY = "beforeTestDryDensity";
+	public static final String BEFORE_TEST_VOID_RATIO = "beforeTestVoidRatio";
+	public static final String AFTER_TEST_WET_DENSITY = "afterTestWetDensity";
+	public static final String SPECIMEN_NO = "specimenNo";
+	public static final String LAST_MOD_BY = "lastModBy";
+	public static final String DESCRIPTION = "description";
+	public static final String SHEAR_MAX_SHEAR_STRESS = "shearMaxShearStress";
+	public static final String SHEAR_AVG_NORMAL_STRESS = "shearAvgNormalStress";
+	public static final String BEFORE_TEST_WET_DENSITY = "beforeTestWetDensity";
+	public static final String BEFORE_TEST_DIAMETER = "beforeTestDiameter";
+	public static final String LAST_MOD_IP = "lastModIp";
+	public static final String BORING_NO = "boringNo";
+	public static final String CONSOLIDATION_NO_STAGES = "consolidationNoStages";
+	public static final String AFTER_TEST_DRY_DENSITY = "afterTestDryDensity";
+	public static final String BEFORE_TEST_SATURATION = "beforeTestSaturation";
+	public static final String SHEAR_FINAL_HEIGHT = "shearFinalHeight";
+	public static final String SPECIFIC_GRAVITY = "specificGravity";
+	public static final String PREP = "prep";
+	public static final String AFTER_TEST_WATER_CONTENT = "afterTestWaterContent";
+	public static final String ID = "id";
+	public static final String SPECIMEN_TYPE = "specimenType";
+	public static final String USCS_CLASS = "uscsClass";
+	public static final String SHEAR_MAX_SHEAR_FORCE = "shearMaxShearForce";
+	public static final String SHEAR_HEIGHT_CHANGE = "shearHeightChange";
+	public static final String CREATE_DATE = "createDate";
+	public static final String BEFORE_TEST_WATER_CONTENT = "beforeTestWaterContent";
+	public static final String BEFORE_TEST_HEIGHT = "beforeTestHeight";
+	public static final String AFTER_TEST_SATURATION = "afterTestSaturation";
+	public static final String BEFORE_TEST_VOLUME = "beforeTestVolume";
+	public static final String SHEAR_NO_STAGES = "shearNoStages";
+	public static final String ACTIVE = "active";
+	public static final String BEFORE_TEST_AREA = "beforeTestArea";
+	public static final String SHEAR_MAX_DISPLACEMENT = "shearMaxDisplacement";
+	public static final String VERSION = "version";
+	public static final String SHEAR_TRAVEL = "shearTravel";
+	public static final String CREATE_BY_IP = "createByIp";
+	public static final String SHEAR_FINAL_VOLUME = "shearFinalVolume";
+	public static final String CREATE_BY = "createBy";
+	public static final String DEPTH = "depth";
+	public static final String SHEAR_AVG_RATE = "shearAvgRate";
+	public static final String AFTER_TEST_VOID_RATIO = "afterTestVoidRatio";
+	public static final String CONSOLIDATION_SETTLEMENT = "consolidationSettlement";
+	public static final String TEST_ID = "testId";
+	public static final String DATE_TEST = "dateTest";
+	public static final String AASHTO_CLASS = "aashtoClass";
+	public static final String BEFORE_TEST_VOLUME_SOLIDS = "beforeTestVolumeSolids";
+	public static final String LAST_MOD = "lastMod";
+
+}
+

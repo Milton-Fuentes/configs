@@ -1,0 +1,7 @@
+com\atser\tools\atserws\test\documents\NysDOTDocumentParseTest.class
+com\atser\tools\atserws\test\bpm\BpmTest.class
+com\atser\tools\atserws\test\documents\GenerateCsvTest.class
+com\atser\tools\atserws\test\reports\JasperTest.class
+com\atser\tools\atserws\test\rabbitmq\RabbitMQProducer.class
+com\atser\tools\atserws\test\rabbitmq\RabbitMQConsumer.class
+com\atser\tools\atserws\test\WSTestMain.class
